@@ -113,10 +113,10 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Joefrey &amp; Sheila</h1>
-							<h2>We Are Getting Married</h2>
+							<h1>Lau &amp; Tó-zé</h1>
+							<h2>Vamos casar-nos</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							<p><a href="#" class="btn btn-default btn-sm">Guardem a data</a></p>
 						</div>
 					</div>
 				</div>
@@ -128,9 +128,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Hello!</h2>
-					<h3>November 28th, 2016 New York, USA</h3>
-					<p>We invited you to celebrate our wedding</p>
+					<h2>Olá!</h2>
+					<h3>15 de agosto, 2025 Santiago de Riba-ulo, Portugal</h3>
+					<p>Estão convidados para o nosso casamento!</p>
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
@@ -609,23 +609,25 @@
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
-
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-</script>
+		// Set target date: 15 August 2025
+		var targetDate = new Date(2025, 7, 15);  // Months are zero-indexed (0 = January, 7 = August)
+	
+		// Default example
+		simplyCountdown('.simply-countdown-one', {
+			year: targetDate.getFullYear(),
+			month: targetDate.getMonth() + 1,  // Add 1 because months are zero-indexed
+			day: targetDate.getDate()
+		});
+	
+		// jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: targetDate.getFullYear(),
+			month: targetDate.getMonth() + 1,
+			day: targetDate.getDate(),
+			enableUtc: false  // Optionally, disable UTC time for local time
+		});
+	</script>
+	
 
 	</body>
 </html>
