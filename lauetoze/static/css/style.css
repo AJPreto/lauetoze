@@ -47,13 +47,13 @@ body {
 }
 
 a {
-  color: #F14E95;
+  color: #990066;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #F14E95;
+  color: #990066;
   outline: none;
   text-decoration: none;
 }
@@ -71,12 +71,12 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #F14E95;
+  background: #990066;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #F14E95;
+  background: #990066;
 }
 
 ::selection {
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #F14E95;
+  color: #990066;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: #fff;
