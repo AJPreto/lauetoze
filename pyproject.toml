@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "lauetoze"
+version = "0.1.0"
+description = ""
+authors = [
+    "António J Preto",
+]
+readme = "README.md"
+packages = [{ include = "lauetoze" }]
+
+[tool.poetry.dependencies]
+python = "~3.9"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.1"
+black = "^23.9.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
