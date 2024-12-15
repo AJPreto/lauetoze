@@ -74,31 +74,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="{{ url_for('home') }}">Casamento<strong>.</strong></a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">Story</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
+						<li class="active"><a href="{{ url_for('home') }}">Início</a></li>
+						<li><a href="{{ url_for('rsvp') }}">Presenças</a></li>
 					</ul>
 				</div>
 			</div>
@@ -129,7 +110,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Olá!</h2>
-					<h3>15 de agosto, 2025 Santiago de Riba-ulo, Portugal</h3>
+					<h3>15 de agosto, 2025 Santiago de Riba-Ul, Portugal</h3>
 					<p>Estão convidados para o nosso casamento!</p>
 				</div>
 			</div>
@@ -139,7 +120,7 @@
 						<img src="images/groom.jpg" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-groom">
-						<h3>Joefrey Mahusay</h3>
+						<h3>Lau</h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
 					</div>
 				</div>
@@ -149,7 +130,7 @@
 						<img src="images/bride.jpg" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-bride">
-						<h3>Sheila Mahusay</h3>
+						<h3>Tó-zé</h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
 					</div>
 				</div>
@@ -162,8 +143,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>Our Special Events</span>
-					<h2>Wedding Events</h2>
+					<span>ocasiões especiais</span>
+					<h2>Eventos do Casamento</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -172,34 +153,66 @@
 						<div class="col-md-10 col-md-offset-1">
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Main Ceremony</h3>
+									<!-- Image added here -->
+									
+									<h3>Cerimónia principal</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>4:00 PM</span>
-										<span>6:00 PM</span>
+										<span>11:00</span>
+										<span>13:00</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2016</span>
+										<span>Sexta, dia 15</span>
+										<span>Agosto, 2025</span>
 									</div>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
+									<div class="location">
+										<!-- Link to the location (Google Maps or other) -->
+										<a href="https://maps.app.goo.gl/SudEMCcvWYvJk8Yp6" target="_blank">
+											<!-- Image of the pin (replace with your desired pin image URL) -->
+											<i class="icon-pin"></i>
+											<span>Localização</span>
+										</a>
+										<br>
+									</div>
+									<div class="row">
+										<div class="col-md-5">
+											<img src="{{ url_for('static', filename='images/church.jpeg') }}" alt="Igreja de Santiago de Riba-Ul" class="img-responsive" style="width:100%; margin-bottom: 5px;">
+										</div>
+										<div class="col-md-5">
+											<p>Vamos casar-nos na igreja de Santiago de Riba-Ul, do outro lado da estrada de onde a Lau cresceu!</p>
+										</div>
+									  </div>
+									</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Wedding Party</h3>
+									<h3>Receção</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>7:00 PM</span>
-										<span>12:00 AM</span>
+										<span>13:00</span>
+										<span>...</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2016</span>
+										<span>Sexta 15</span>
+										<span>Agosto, 2025</span>
 									</div>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<div class="location">
+										<!-- Link to the location (Google Maps or other) -->
+										<a href="https://maps.app.goo.gl/yw1Xmfp373s5y5yi6" target="_blank">
+											<!-- Image of the pin (replace with your desired pin image URL) -->
+											<i class="icon-pin"></i>
+											<span>Localização</span>
+										</a>
+										<br>
+									</div>
+										<img src="{{ url_for('static', filename='images/quinta.jpg') }}" alt="Quinta de Santiago" class="img-responsive" style="width:80%; margin-bottom: 5px;">
+
+										<p>A receção vai ser na <a href="http://www.portoenorte.pt/en/where-to-eat/quinta-de-santiago-de-riba-ul/">Quinta de Santiago</a>, muito perto da igreja.</p>
+
+									</div>
+									
 								</div>
 							</div>
 						</div>
