@@ -1840,4 +1840,13 @@ form label {
   opacity: 0;
 }
 
+.round-img {
+  width: 500px;          /* Set width */
+  height: 500px;         /* Set height */
+  border-radius: 50%;    /* Makes the image round */
+  object-fit: cover;     /* Ensures the image covers the circle area */
+  display: block;        /* Align as block for margin auto */
+  margin: 0 auto;        /* Centers the image horizontally */
+}
+
 /*# sourceMappingURL=style.css.map */
