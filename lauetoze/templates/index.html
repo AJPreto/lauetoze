@@ -106,18 +106,6 @@
 		</div>
 	</header>
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Vão estar presentes?</h2>
-					<p>Por favor vão à <a href="{{ url_for('rsvp') }}">página de Presenças</a> e digam-nos quantos são!</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div id="fh5co-couple">
 		<div class="container">
 			<div class="row">
@@ -139,6 +127,34 @@
 					<div class="desc-bride">
 						<h3>Tó-zé</h3>
 						<p><b>António José Preto Martins Gomes</b>, filho de <b>Maria Olinda Preto Martins</b> e <b>José Manuel de Almeida Gomes</b></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<div class="col-md-12 animate-box">
+		<div class="wrap-testimony">
+			<div class="owl-carousel-fullwidth">
+				<div class="item">
+					<div class="testimony-slide active text-center">
+						<img src="{{ url_for('static', filename='images/landscape.jpg') }}" style="width: 500px; height: 500px;" class="round-img img-fluid" alt="user">
+					</div>
+				</div>
+				<div class="item">
+					<div class="testimony-slide active text-center">
+						<figure>
+							<img src="{{ url_for('static', filename='images/morocco.jpg') }}" style="width: 500px; height: 500px;" class="round-img img-fluid" alt="user">
+						</figure>
+					</div>
+				</div>
+				<div class="item">
+					<div class="testimony-slide active text-center">
+						<figure>
+							<img src="{{ url_for('static', filename='images/airplane.jpg') }}" style="width: 500px; height: 500px;" class="round-img img-fluid" alt="user">
+						</figure>
 					</div>
 				</div>
 			</div>
@@ -233,33 +249,18 @@
 			
 		</div>
 	</div>
-	<br>
-	<br>
-	<div class="col-md-12 animate-box">
-		<div class="wrap-testimony">
-			<div class="owl-carousel-fullwidth">
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<img src="{{ url_for('static', filename='images/landscape.jpg') }}" style="width: 500px; height: 500px;" class="round-img img-fluid" alt="user">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<figure>
-							<img src="{{ url_for('static', filename='images/morocco.jpg') }}" style="width: 500px; height: 500px;" class="round-img img-fluid" alt="user">
-						</figure>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<figure>
-							<img src="{{ url_for('static', filename='images/airplane.jpg') }}" style="width: 500px; height: 500px;" class="round-img img-fluid" alt="user">
-						</figure>
-					</div>
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Vão estar presentes?</h2>
+					<p>Por favor vão à <a href="{{ url_for('rsvp') }}">página de Presenças</a> e digam-nos quantos são!</p>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
