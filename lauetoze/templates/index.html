@@ -81,6 +81,7 @@
 					<ul>
 						<li class="active"><a href="{{ url_for('home') }}">Início</a></li>
 						<li><a href="{{ url_for('rsvp') }}">Presenças</a></li>
+						<li><a href="{{ url_for('housing') }}">Alojamento</a></li>
 					</ul>
 				</div>
 			</div>
@@ -323,6 +324,17 @@
 		</div>
 	</div>
 
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Precisam de alojamento?</h2>
+					<p>Por favor vão à <a href="{{ url_for('rsvp') }}">página de Alojamentos</a> e vejam alternativas!</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">

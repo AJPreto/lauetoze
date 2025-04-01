@@ -11,5 +11,9 @@ def home():
 def rsvp():
     return render_template("rsvp.html")  # Render the index.html template
 
+@app.route("/housing", endpoint='housing')
+def rsvp():
+    return render_template("housing.html")  # Render the index.html template
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000,debug=True)
