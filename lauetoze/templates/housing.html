@@ -22,68 +22,85 @@
 
     <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
 	<style>
-		/* Ensure the event-wrap can grow based on content */
+		/* Reset potential conflicting CSS for the event-wrap */
 		.event-wrap {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			height: auto; /* Allow dynamic height for content */
 			padding: 20px;
 			background: #fff;
 			border-radius: 5px;
 			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 			margin-bottom: 20px;
-			overflow: visible; /* Make sure the text can overflow */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			height: auto; /* Let it grow based on content */
 		}
 	
-		/* Make sure images resize correctly */
+		/* Images in event-wrap: Make sure they are responsive */
 		.event-wrap img {
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 10px;
 		}
 	
-		/* Allow paragraphs and text to break naturally */
+		/* Text in the event-wrap: Avoid cutting off */
 		.event-wrap p {
-			word-wrap: break-word;
-			overflow-wrap: break-word;
-			text-align: justify;
 			font-size: 16px;
 			line-height: 1.6;
+			margin: 0;
 		}
 	
-		/* If text still gets clipped, use this to ensure no overflow issues */
+		/* Adjust individual columns (col-md-6) to handle content better */
 		.col-md-6 {
-			flex: 1;
-			padding: 10px;
-			overflow: visible; /* Ensure content in the column is visible */
-			height: auto; /* Allow the column to grow depending on content */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			margin-bottom: 20px;
+			height: auto;
+			padding: 0 15px;
 		}
 	
-		/* Ensure the parent div (row) allows content to flow */
+		/* Ensure the row of content has proper spacing */
 		.row {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 0 -15px;
 		}
 	
-		/* Optional: Adjust the specific text container */
+		/* Additional spacing tweaks */
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	
+		/* Flexbox for the text areas so they don’t get restricted */
+		.col-md-12 {
+			display: block;
+			padding: 0;
+			margin-top: 10px;
+		}
+	
+		/* Increase spacing for headings */
 		.event-wrap h3 {
 			font-size: 22px;
 			font-weight: bold;
 			margin-bottom: 15px;
 		}
 	
-		/* Adjust the container size if needed */
-		.container {
-			width: 100%;
-			padding-left: 15px;
-			padding-right: 15px;
+		.event-wrap .location {
+			margin-top: 10px;
 		}
 	
-		/* Prevent overflow from causing issues */
-		.col-md-12 {
-			padding: 0;
-			overflow: visible;
+		/* Ensure the location link text is not cut off and is readable */
+		.event-wrap a {
+			color: #007BFF;
+			text-decoration: none;
+		}
+	
+		/* Prevent overflow and make sure content stays within bounds */
+		.event-wrap p {
+			word-wrap: break-word;
+			overflow-wrap: break-word;
 		}
 	  </style>
 </head>
