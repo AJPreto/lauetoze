@@ -12,31 +12,6 @@
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
-  <!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 	
@@ -57,9 +32,9 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 	<link rel="icon" href="{{ url_for('static', filename='images/rings.png') }}">
+
 	<!-- Modernizr JS -->
 	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
-	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
@@ -79,7 +54,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="{{ url_for('home') }}">Início</a></li>
-							<li ><a href="{{ url_for('rsvp') }}">Presenças</a></li>
+							<li><a href="{{ url_for('rsvp') }}">Presenças</a></li>
 							<li class="active"><a href="{{ url_for('housing') }}">Alojamento</a></li>
 						</ul>
 					</div>
@@ -113,87 +88,59 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<!-- Image added here -->
-									
-									<h3>Golden Tulip</h3>
-									<div class="location">
-										<!-- Link to the location (Google Maps or other) -->
-										<a href="https://maps.app.goo.gl/vxM8bRYiihUznkCV8" target="_blank">
-											<!-- Image of the pin (replace with your desired pin image URL) -->
-											<i class="icon-pin"></i>
-											<span>Localização</span>
-										</a>
-										<br>
-									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<img src="{{ url_for('static', filename='images/golden_tulip.jpg') }}" alt="Golden Tulip São João da Madeira" class="img-responsive" style="width:100%; margin-bottom: 5px;">
-										</div>
-										<div class="col-md-12">
-											<p>Para efetuar reserva no <a href="https://sao-joao-madeira.goldentulip.com/en-us/?sr=SEO_GOOGLE" target="_blank">Golden Tulip São João da Madeira</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso aos 10% de desconto sobre a tarifa reembolsável no site para a data da reserva.</p>
-										</div>
-									  </div>
-									</div>
+				<div class="col-md-12 text-center">
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="event-wrap animate-box">
+								<h3>Golden Tulip</h3>
+								<div class="location">
+									<a href="https://maps.app.goo.gl/vxM8bRYiihUznkCV8" target="_blank">
+										<i class="icon-pin"></i>
+										<span>Localização</span>
+									</a>
+									<br>
+								</div>
+								<img src="{{ url_for('static', filename='images/golden_tulip.jpg') }}" alt="Golden Tulip São João da Madeira" class="img-responsive" style="width:100%; margin-bottom: 5px;">
+								<p>Para efetuar reserva no <a href="https://sao-joao-madeira.goldentulip.com/en-us/?sr=SEO_GOOGLE" target="_blank">Golden Tulip São João da Madeira</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso aos 10% de desconto sobre a tarifa reembolsável no site para a data da reserva.</p>
 							</div>
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<!-- Image added here -->
-									
-									<h3>Dighton</h3>
-									<div class="location">
-										<!-- Link to the location (Google Maps or other) -->
-										<a href="https://maps.app.goo.gl/68P2LEZdHsRBiVFJ9" target="_blank">
-											<!-- Image of the pin (replace with your desired pin image URL) -->
-											<i class="icon-pin"></i>
-											<span>Localização</span>
-										</a>
-										<br>
-									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<img src="{{ url_for('static', filename='images/dighton.jpg') }}" alt="Hotel Dighton Oliveira de Azeméis" class="img-responsive" style="width:100%; margin-bottom: 5px;">
-										</div>
-										<div class="col-md-12">
-											<p>Para efetuar reserva no <a href="https://www.hotel-dighton.com/en/" target="_blank">Hotel Dighton Oliveira de Azeméis</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso ao desconto. Neste caso, a reserva é efetuada pelo contacto <b>reservas@hotel-dighton.com</b> e tem que ser paga por transerência bancária antecipada até 3 dias antes to check-in. Os preços são, neste caso, fixos: <br />
-											- Quarto single: 81,00€ <br />
-											- Quarto duplo: 87,50€ <br />
-											- Quarto comunicante (4 pessoas): 150,00€ <br />
-											- Quarto Triplo: 125,00€ <br />
+						</div>
 
-										</p>
-										</div>
-									  </div>
-									</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="event-wrap animate-box">
+								<h3>Dighton</h3>
+								<div class="location">
+									<a href="https://maps.app.goo.gl/68P2LEZdHsRBiVFJ9" target="_blank">
+										<i class="icon-pin"></i>
+										<span>Localização</span>
+									</a>
+									<br>
+								</div>
+								<img src="{{ url_for('static', filename='images/dighton.jpg') }}" alt="Hotel Dighton Oliveira de Azeméis" class="img-responsive" style="width:100%; margin-bottom: 5px;">
+								<p>Para efetuar reserva no <a href="https://www.hotel-dighton.com/en/" target="_blank">Hotel Dighton Oliveira de Azeméis</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso ao desconto. Neste caso, a reserva é efetuada pelo contacto <b>reservas@hotel-dighton.com</b> e tem que ser paga por transerência bancária antecipada até 3 dias antes to check-in. Os preços são, neste caso, fixos: <br />
+									- Quarto single: 81,00€ <br />
+									- Quarto duplo: 87,50€ <br />
+									- Quarto comunicante (4 pessoas): 150,00€ <br />
+									- Quarto Triplo: 125,00€ <br />
+								</p>
 							</div>
 						</div>
 					</div>
-					
-				</div>
+				</div>					
 			</div>
 		</div>
 		<div style="height: 60px;"></div>
 	</div>
-	
+
 	<footer id="fh5co-footer" role="contentinfo">
-
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-
-				</div>
+		<div class="row copyright">
+			<div class="col-md-12 text-center">
+				<p>
+					<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+					<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+				</p>
 			</div>
-
 		</div>
 	</footer>
-	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
@@ -218,11 +165,9 @@
 	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
 
-	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="{{ url_for('static', filename='js/simplyCountdown.js') }}"></script>
 	<!-- Main -->
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	</body>
 </html>
-
