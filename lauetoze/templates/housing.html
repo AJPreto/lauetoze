@@ -21,6 +21,43 @@
     <link rel="icon" href="{{ url_for('static', filename='images/rings.png') }}">
 
     <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<style>
+		/* Make sure the container has enough space for all content */
+		.event-wrap {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: auto; /* Allow dynamic height for content */
+			padding: 20px;
+			background: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			margin-bottom: 20px;
+		}
+	
+		/* Allow long paragraphs to wrap */
+		.event-wrap p {
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			text-align: justify;
+			font-size: 16px;
+			line-height: 1.6;
+		}
+	
+		/* Prevent the images from causing overflow */
+		.event-wrap img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+	
+		/* Ensure content in col-md-6 is not clipped */
+		.col-md-6 {
+			flex: 1;
+			padding: 10px;
+			overflow: hidden; /* Ensure content doesn't overflow the container */
+		}
+	  </style>
 </head>
 <body>
 
@@ -87,24 +124,26 @@
                         </div>
 
                         <!-- Dighton Section -->
-                        <div class="col-md-6 col-sm-6 mb-4">
-                            <div class="event-wrap animate-box">
-                                <h3>Dighton</h3>
-                                <div class="location">
-                                    <a href="https://maps.app.goo.gl/68P2LEZdHsRBiVFJ9" target="_blank">
-                                        <i class="icon-pin"></i>
-                                        <span>Localização</span>
-                                    </a>
-                                </div>
-                                <img src="{{ url_for('static', filename='images/dighton.jpg') }}" alt="Hotel Dighton Oliveira de Azeméis" class="img-fluid" style="max-width: 100%; margin-bottom: 5px;">
-                                <p>Para efetuar reserva no <a href="https://www.hotel-dighton.com/en/" target="_blank">Hotel Dighton Oliveira de Azeméis</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso ao desconto. Neste caso, a reserva é efetuada pelo contacto <b>reservas@hotel-dighton.com</b> e tem que ser paga por transerência bancária antecipada até 3 dias antes to check-in. Os preços são, neste caso, fixos: <br />
-                                    - Quarto single: 81,00€ <br />
-                                    - Quarto duplo: 87,50€ <br />
-                                    - Quarto comunicante (4 pessoas): 150,00€ <br />
-                                    - Quarto Triplo: 125,00€ <br />
-                                </p>
-                            </div>
-                        </div>
+                        <!-- Dighton Section -->
+						<div class="col-md-6 col-sm-6 mb-4">
+							<div class="event-wrap animate-box">
+								<h3>Dighton</h3>
+								<div class="location">
+									<a href="https://maps.app.goo.gl/68P2LEZdHsRBiVFJ9" target="_blank">
+										<i class="icon-pin"></i>
+										<span>Localização</span>
+									</a>
+								</div>
+								<img src="{{ url_for('static', filename='images/dighton.jpg') }}" alt="Hotel Dighton Oliveira de Azeméis" class="img-fluid" style="max-width: 100%; margin-bottom: 5px;">
+								<p>Para efetuar reserva no <a href="https://www.hotel-dighton.com/en/" target="_blank">Hotel Dighton Oliveira de Azeméis</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso ao desconto. Neste caso, a reserva é efetuada pelo contacto <b>reservas@hotel-dighton.com</b> e tem que ser paga por transerência bancária antecipada até 3 dias antes to check-in. Os preços são, neste caso, fixos: <br />
+									- Quarto single: 81,00€ <br />
+									- Quarto duplo: 87,50€ <br />
+									- Quarto comunicante (4 pessoas): 150,00€ <br />
+									- Quarto Triplo: 125,00€ <br />
+								</p>
+							</div>
+						</div>
+
                     </div>
                 </div>					
             </div>
