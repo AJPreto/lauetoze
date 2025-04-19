@@ -22,20 +22,28 @@
 
     <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
 	<style>
-		/* Make sure the container has enough space for all content */
+		/* Ensure the event-wrap can grow based on content */
 		.event-wrap {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-start;
 			height: auto; /* Allow dynamic height for content */
 			padding: 20px;
 			background: #fff;
 			border-radius: 5px;
 			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 			margin-bottom: 20px;
+			overflow: visible; /* Make sure the text can overflow */
 		}
 	
-		/* Allow long paragraphs to wrap */
+		/* Make sure images resize correctly */
+		.event-wrap img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+	
+		/* Allow paragraphs and text to break naturally */
 		.event-wrap p {
 			word-wrap: break-word;
 			overflow-wrap: break-word;
@@ -44,18 +52,38 @@
 			line-height: 1.6;
 		}
 	
-		/* Prevent the images from causing overflow */
-		.event-wrap img {
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 10px;
-		}
-	
-		/* Ensure content in col-md-6 is not clipped */
+		/* If text still gets clipped, use this to ensure no overflow issues */
 		.col-md-6 {
 			flex: 1;
 			padding: 10px;
-			overflow: hidden; /* Ensure content doesn't overflow the container */
+			overflow: visible; /* Ensure content in the column is visible */
+			height: auto; /* Allow the column to grow depending on content */
+		}
+	
+		/* Ensure the parent div (row) allows content to flow */
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	
+		/* Optional: Adjust the specific text container */
+		.event-wrap h3 {
+			font-size: 22px;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+	
+		/* Adjust the container size if needed */
+		.container {
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	
+		/* Prevent overflow from causing issues */
+		.col-md-12 {
+			padding: 0;
+			overflow: visible;
 		}
 	  </style>
 </head>
