@@ -10499,3 +10499,11 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'housin
 127.0.0.1 - - [19/Apr/2025 20:43:39] "[36mGET /static/js/main.js HTTP/1.0[0m" 304 -
 127.0.0.1 - - [19/Apr/2025 20:43:39] "GET /housing HTTP/1.0" 200 -
 127.0.0.1 - - [19/Apr/2025 20:43:39] "GET /static/images/rings.png HTTP/1.0" 200 -
+127.0.0.1 - - [19/Apr/2025 20:49:30] "[33mGET /ab2g HTTP/1.0[0m" 404 -
+127.0.0.1 - - [19/Apr/2025 20:49:31] "[33mGET /ab2h HTTP/1.0[0m" 404 -
+127.0.0.1 - - [19/Apr/2025 20:49:32] "[33mGET /alive.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [19/Apr/2025 20:49:36] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [19/Apr/2025 20:49:37] "[33mGET /t4 HTTP/1.0[0m" 404 -
+127.0.0.1 - - [19/Apr/2025 20:49:39] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [19/Apr/2025 20:49:39] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [19/Apr/2025 20:49:40] "[33mGET /teorema505?t=1 HTTP/1.0[0m" 404 -
