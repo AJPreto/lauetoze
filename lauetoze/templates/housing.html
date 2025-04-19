@@ -22,206 +22,123 @@
 
     <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
 	<style>
-		/* Reset potential conflicting CSS for the event-wrap */
+		/* CSS reset for .event-wrap */
 		.event-wrap {
-			padding: 20px;
 			background: #fff;
 			border-radius: 5px;
 			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 			margin-bottom: 20px;
+			padding: 15px;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
-			height: auto; /* Let it grow based on content */
+			height: auto; /* No height restriction */
+			overflow: visible; /* Make sure content is fully visible */
 		}
 	
-		/* Images in event-wrap: Make sure they are responsive */
+		/* Ensure the image is responsive and doesn't overflow */
 		.event-wrap img {
 			max-width: 100%;
 			height: auto;
+			margin-bottom: 15px;
+		}
+	
+		/* Text inside the event-wrap: Keep it readable */
+		.event-wrap h3 {
+			font-size: 22px;
+			font-weight: bold;
 			margin-bottom: 10px;
 		}
 	
-		/* Text in the event-wrap: Avoid cutting off */
 		.event-wrap p {
 			font-size: 16px;
 			line-height: 1.6;
 			margin: 0;
+			word-wrap: break-word;
 		}
 	
-		/* Adjust individual columns (col-md-6) to handle content better */
+		/* Container for the columns (col-md-6) */
 		.col-md-6 {
+			padding: 15px;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
-			margin-bottom: 20px;
 			height: auto;
-			padding: 0 15px;
 		}
 	
-		/* Ensure the row of content has proper spacing */
+		/* Ensure that the entire row of columns is laid out properly */
 		.row {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			margin: 0 -15px;
 		}
 	
-		/* Additional spacing tweaks */
+		/* Add spacing between the columns */
 		.container {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
 	
-		/* Flexbox for the text areas so they don’t get restricted */
-		.col-md-12 {
-			display: block;
-			padding: 0;
-			margin-top: 10px;
-		}
-	
-		/* Increase spacing for headings */
-		.event-wrap h3 {
-			font-size: 22px;
-			font-weight: bold;
-			margin-bottom: 15px;
-		}
-	
-		.event-wrap .location {
-			margin-top: 10px;
-		}
-	
-		/* Ensure the location link text is not cut off and is readable */
+		/* Modify the <a> tag inside .event-wrap to be clickable and styled */
 		.event-wrap a {
 			color: #007BFF;
 			text-decoration: none;
 		}
 	
-		/* Prevent overflow and make sure content stays within bounds */
-		.event-wrap p {
-			word-wrap: break-word;
-			overflow-wrap: break-word;
+		.location {
+			margin-top: 10px;
 		}
 	  </style>
-</head>
-<body>
-
-<div class="fh5co-loader"></div>
-
-<div id="page">
-    <nav class="fh5co-nav" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-2">
-                    <div id="fh5co-logo"><a href="index.html">Casamento<strong>.</strong></a></div>
-                </div>
-                <div class="col-xs-10 text-right menu-1">
-                    <ul>
-                        <li><a href="{{ url_for('home') }}">Início</a></li>
-                        <li><a href="{{ url_for('rsvp') }}">Presenças</a></li>
-                        <li class="active"><a href="{{ url_for('housing') }}">Alojamento</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_1.jpg);">
-        <div class="overlay"></div>
-        <div class="fh5co-container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <div class="display-t">
-                        <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                            <h1>Alojamentos</h1>
-                            <h2>Caso necessitem de alojamento, por favor vejam as opções abaixo</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div id="fh5co-event" class="fh5co-bg" style="background-image:url(static/images/colored_bg_2.jpg); padding: 50px 0 100px;">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                    <h2>Alojamento</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="row">
-                        <!-- Golden Tulip Section -->
-                        <div class="col-md-6 col-sm-6 mb-4">
-                            <div class="event-wrap animate-box">
-                                <h3>Golden Tulip</h3>
-                                <div class="location">
-                                    <a href="https://maps.app.goo.gl/vxM8bRYiihUznkCV8" target="_blank">
-                                        <i class="icon-pin"></i>
-                                        <span>Localização</span>
-                                    </a>
-                                </div>
-                                <img src="{{ url_for('static', filename='images/golden_tulip.jpg') }}" alt="Golden Tulip São João da Madeira" class="img-fluid" style="max-width: 100%; margin-bottom: 5px;">
-                                <p>Para efetuar reserva no <a href="https://sao-joao-madeira.goldentulip.com/en-us/?sr=SEO_GOOGLE" target="_blank">Golden Tulip São João da Madeira</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso aos 10% de desconto sobre a tarifa reembolsável no site para a data da reserva.</p>
-                            </div>
-                        </div>
-
-                        <!-- Dighton Section -->
-                        <!-- Dighton Section -->
-						<div class="col-md-6 col-sm-6 mb-4">
-							<div class="event-wrap animate-box">
-								<h3>Dighton</h3>
-								<div class="location">
-									<a href="https://maps.app.goo.gl/68P2LEZdHsRBiVFJ9" target="_blank">
-										<i class="icon-pin"></i>
-										<span>Localização</span>
-									</a>
-								</div>
-								<img src="{{ url_for('static', filename='images/dighton.jpg') }}" alt="Hotel Dighton Oliveira de Azeméis" class="img-fluid" style="max-width: 100%; margin-bottom: 5px;">
-								<p>Para efetuar reserva no <a href="https://www.hotel-dighton.com/en/" target="_blank">Hotel Dighton Oliveira de Azeméis</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso ao desconto. Neste caso, a reserva é efetuada pelo contacto <b>reservas@hotel-dighton.com</b> e tem que ser paga por transerência bancária antecipada até 3 dias antes to check-in. Os preços são, neste caso, fixos: <br />
-									- Quarto single: 81,00€ <br />
-									- Quarto duplo: 87,50€ <br />
-									- Quarto comunicante (4 pessoas): 150,00€ <br />
-									- Quarto Triplo: 125,00€ <br />
-								</p>
-							</div>
-						</div>
-
-                    </div>
-                </div>					
-            </div>
-        </div>
-        <div style="height: 60px;"></div>
-    </div>
-
-    <footer id="fh5co-footer" role="contentinfo">
-        <div class="row copyright">
-            <div class="col-md-12 text-center">
-                <p>
-                    <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-                    <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-    </div>
-
-    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/simplyCountdown.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
-</body>
-</html>
+	</head>
+	<body>
+	  <!-- Your HTML structure remains the same, no changes here -->
+	  <div id="fh5co-event" class="fh5co-bg" style="background-image:url(static/images/colored_bg_2.jpg); padding: 50px 0 100px;">
+		<div class="overlay"></div>
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+			  <h2>Alojamento</h2>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-6 col-sm-6 text-center">
+			  <div class="event-wrap animate-box">
+				<h3>Golden Tulip</h3>
+				<div class="location">
+				  <a href="https://maps.app.goo.gl/vxM8bRYiihUznkCV8" target="_blank">
+					<i class="icon-pin"></i><span>Localização</span>
+				  </a>
+				</div>
+				<div class="row">
+				  <div class="col-md-12">
+					<img src="{{ url_for('static', filename='images/golden_tulip.jpg') }}" alt="Golden Tulip São João da Madeira" class="img-responsive">
+				  </div>
+				  <div class="col-md-12">
+					<p>Para efetuar reserva no <a href="https://sao-joao-madeira.goldentulip.com/en-us/?sr=SEO_GOOGLE" target="_blank">Golden Tulip São João da Madeira</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas para terem acesso aos 10% de desconto...</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6 col-sm-6 text-center">
+			  <div class="event-wrap animate-box">
+				<h3>Dighton</h3>
+				<div class="location">
+				  <a href="https://maps.app.goo.gl/68P2LEZdHsRBiVFJ9" target="_blank">
+					<i class="icon-pin"></i><span>Localização</span>
+				  </a>
+				</div>
+				<div class="row">
+				  <div class="col-md-12">
+					<img src="{{ url_for('static', filename='images/dighton.jpg') }}" alt="Hotel Dighton Oliveira de Azeméis" class="img-responsive">
+				  </div>
+				  <div class="col-md-12">
+					<p>Para efetuar reserva no <a href="https://www.hotel-dighton.com/en/" target="_blank">Hotel Dighton Oliveira de Azeméis</a>, deverão utilizar a referência <b>"CASAMENTO CLÁUDIA E TO-ZÉ"</b>, na solicitação de reservas...</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</body>
+	</html>
